@@ -1,2 +1,37 @@
 @import 'var';
 @import 'global';
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 30px;
+  }
+
+  input {
+    width: 60%;
+    padding: 1em;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+  }
+}
+
+main {
+  background-color: #222831;
+  width: 50vw;
+  min-height: 70vh;
+  padding: 3em;
+  margin: 50px auto 50px auto;
+  border-radius: 10px 10px 10px 10px;
+
+  section {
+    width: 40%;
+    display: flex;
+    margin: 20px auto 0 auto;
+    justify-content: space-between;
+  }
+}
