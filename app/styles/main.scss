@@ -17,6 +17,11 @@ header {
     padding: 1em;
     border: none;
     border-radius: 5px 5px 5px 5px;
+
+    &:focus {
+      border: none;
+      outline: none;
+    }
   }
 }
 
@@ -29,14 +34,15 @@ main {
   border-radius: 10px 10px 10px 10px;
 
   section {
-    width: 70%;
+    width: 50%;
     display: flex;
-    margin: 20px auto 0 auto;
+    margin: 30px auto;
     justify-content: space-between;
   }
 }
 
-i {
+.delete-btn,
+check-btn {
   width: 20px;
   height: 20px;
 }
@@ -48,11 +54,14 @@ i {
 
 ul {
   list-style-type: none;
+  width: 60%;
+  margin: 0 auto;
 
   .item {
     display: grid;
     padding: 0.5em;
     grid-template-columns: 20px auto 20px;
+    align-items: center;
     grid-gap: 10px;
   }
 }
