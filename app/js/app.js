@@ -19,10 +19,14 @@ input.addEventListener('keypress', function(e){
     item.append(deleteBtn);
     list.append(item)
 
-
     checkBtn.addEventListener('click', function(e){
-    e.target.parentElement.children[1].classList.toggle('check');
-  })
+      e.target.parentElement.children[1].classList.toggle('check');
+    })
+
+    deleteBtn.addEventListener('click', function(e){
+      e.target.parentElement.remove();
+    })
+  
   }
 
 
