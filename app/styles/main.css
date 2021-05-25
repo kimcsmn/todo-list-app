@@ -29,8 +29,7 @@ header {
   background: url("../images/nathan-dumlao-89QxqL_yw-8-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: 50% 103%;
+  background-position: 50% 81%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,6 +46,20 @@ header {
   min-height: 350px;
 }
 
+@media screen and (max-width: 950px) {
+  header {
+    background-size: cover;
+    min-height: 300px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    background-size: cover;
+    min-height: 250px;
+  }
+}
+
 header h1 {
   text-align: center;
   font-size: 4rem;
@@ -57,8 +70,14 @@ header h1 {
   text-shadow: 3px 3px #ad0149;
 }
 
+@media screen and (max-width: 375px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
 header input {
-  width: 35%;
+  width: 40vw;
   padding: 1em;
   border: none;
   background-color: #fbe5da;
@@ -69,6 +88,23 @@ header input {
 header input:focus {
   border: none;
   outline: none;
+}
+
+@media screen and (max-width: 375px) {
+  header input {
+    width: 90vw;
+    background-color: #fbe5da;
+    padding: none;
+    font-weight: 700;
+    height: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  header input {
+    width: 50vw;
+  }
 }
 
 main {
@@ -88,6 +124,21 @@ main section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (max-width: 375px) {
+  main {
+    top: 20vh;
+    width: 90vw;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  main {
+    top: 18vh;
+    width: 90vw;
+  }
 }
 
 .check {
