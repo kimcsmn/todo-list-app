@@ -4,7 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: solid 1px red;
+  overflow: hidden;
+  // outline: solid 1px red;
 }
 
 html {
@@ -13,12 +14,11 @@ html {
 
 body {
   min-width: 100vw;
-  background-color: #393e46;
-  background: url('https://images.unsplash.com/photo-1544819679-57b273c027a3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-  background-repeat: no-repeat;
-  background-size: cover;
+  min-height: 100vh;
+  background-color: #1e2019;
+  color: #1e2019;
   font-size: 1.6rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 * > a {

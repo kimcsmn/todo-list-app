@@ -2,21 +2,34 @@
 @import 'global';
 
 header {
+  background: url('../images/nathan-dumlao-89QxqL_yw-8-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 103%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 350px;
 
   h1 {
     text-align: center;
-    font-size: 3rem;
-    padding: 30px;
+    font-size: 4rem;
+    margin-bottom: 1em;
+    color: #9bb7b8;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px #ad0149;
   }
 
   input {
-    width: 60%;
+    width: 35%;
     padding: 1em;
     border: none;
+    background-color: #fbe5da;
     border-radius: 5px 5px 5px 5px;
+    z-index: 1;
 
     &:focus {
       border: none;
@@ -26,25 +39,18 @@ header {
 }
 
 main {
-  background-color: #252525;
-  width: 50vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25vh;
+  width: 40vw;
   min-height: 70vh;
-  padding: 3em;
   margin: 50px auto 50px auto;
-  border-radius: 10px 10px 10px 10px;
 
   section {
-    width: 50%;
     display: flex;
-    margin: 30px auto;
     justify-content: space-between;
   }
-}
-
-.delete-btn,
-check-btn {
-  width: 20px;
-  height: 20px;
 }
 
 .check {
@@ -55,13 +61,61 @@ check-btn {
 ul {
   list-style-type: none;
   margin: 0 auto;
-
   .item {
-    width: 80%;
     display: grid;
-    padding: 0.5em;
+    padding: 1em 0.5em;
     margin: 0 auto;
     grid-template-columns: 20px auto 20px;
     grid-gap: 10px;
+    background-color: #fbe5da;
+    align-items: center;
+
+    &:last-child {
+      border-radius: 0 0 8px 8px;
+    }
   }
+}
+
+.hide {
+  display: none;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fbe5da;
+  padding: 1em 0.5em;
+  border-radius: 8px 8px 0 0;
+  border-bottom: solid 2px #9bb7b8;
+
+  select {
+    border: none;
+  }
+
+  .clear {
+    color: #ad0149;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.check-btn,
+.delete-btn {
+  color: #ad0149;
+}
+
+// ANIMATION
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+.slideOut {
+  animation: slideOut 300ms forwards;
 }

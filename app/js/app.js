@@ -4,11 +4,10 @@ const filter = document.querySelector('.filter');
 const todos = list.children;
 const clear = document.querySelector('.clear');
 
-
 input.addEventListener('keypress', function(e){
   if (e.key === 'Enter'){
     
-    // create a li
+    // create an li
     const li = document.createElement('li');
     const item = document.createElement('div');
     const checkBtn = document.createElement('i');
@@ -23,6 +22,7 @@ input.addEventListener('keypress', function(e){
     item.append(deleteBtn);
     list.append(item)
     updateCount();
+    showFilter();
     
     checkBtn.addEventListener('click', function(e){
       e.target.parentElement.children[1].classList.toggle('check');
@@ -31,15 +31,15 @@ input.addEventListener('keypress', function(e){
     })
     
     deleteBtn.addEventListener('click', function(e){
-      e.target.parentElement.remove();
-      updateCount();
+      e.target.parentElement.classList.add('slideOut');
+      setTimeout(() => {
+        e.target.parentElement.remove();
+        updateCount();
+        showFilter();
+      }, 300)
     })
-    
   }
- 
 })
-
-
 
 
 filter.addEventListener('change', function(e){
@@ -76,6 +76,7 @@ clear.addEventListener('click', function(e){
   for (var item of completedItems){
     item.remove();
   }
+  showFilter();
 })
 
 
@@ -87,5 +88,13 @@ function updateCount(e){
       todoCount++;
     }
     countPara.innerHTML = `${todoCount} items left`
+  }
+}
+
+function showFilter(e){
+  if (todos.length > 0){
+    filter.parentElement.classList.remove('hide');
+  } else{
+    filter.parentElement.classList.add('hide');
   }
 }

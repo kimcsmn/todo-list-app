@@ -6,17 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/ad7adf6dc2.js" crossorigin="anonymous"></script>
   <title>Todo List App</title>
 </head>
 <body>
+  <header>
+    <h1>Todo List</h1>
+    <input class="input" type="text" placeholder="Add new todo...">
+  </header>
   <main>
-    <header>
-      <h1>Todo List</h1>
-      <input class="input" type="text" placeholder="Add new todo...">
-    </header>
-    <section>
+    <section class="top hide">
       <select class="filter">
         <option value="all">All</option>
         <option value="active">Active</option>
