@@ -25,8 +25,9 @@ input.addEventListener('keypress', function(e){
     showFilter();
     
     checkBtn.addEventListener('click', function(e){
+      e.target.classList.toggle('checked-btn');
       e.target.parentElement.children[1].classList.toggle('check');
-      e.target.parentElement.classList.toggle('completed')
+      e.target.parentElement.classList.toggle('completed');
       updateCount();
     })
     
@@ -94,6 +95,7 @@ function updateCount(e){
 function showFilter(e){
   if (todos.length > 0){
     filter.parentElement.classList.remove('hide');
+    filter
   } else{
     filter.parentElement.classList.add('hide');
   }
