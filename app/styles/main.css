@@ -115,6 +115,25 @@ header h1 {
   }
 }
 
+header form {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+header .add-btn {
+  font-size: 3.125rem;
+  position: absolute;
+  color: #fbe5da;
+  right: 0;
+  z-index: 1;
+}
+
 header input {
   width: 90vw;
   padding: 1em;
@@ -127,15 +146,14 @@ header input {
   z-index: 1;
 }
 
+header input:focus {
+  outline: none;
+}
+
 @media screen and (min-width: 46.875rem) {
   header input {
     width: 31.25rem;
   }
-}
-
-header input:focus {
-  border: none;
-  outline: none;
 }
 
 @-webkit-keyframes slideOut {

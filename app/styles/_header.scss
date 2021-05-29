@@ -9,7 +9,6 @@ header {
   justify-content: center;
   min-height: 15vh;
   padding: 2em 0;
-  // box-shadow: inset 0 0 100px black;
 
   @media screen and (min-width: $desktop) {
     min-height: 30vh;
@@ -29,6 +28,21 @@ header {
     }
   }
 
+  form {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .add-btn {
+    font-size: 3.125rem;
+    position: absolute;
+    color: $white;
+    right: 0;
+    z-index: 1;
+  }
+
   input {
     width: 90vw;
     padding: 1em;
@@ -40,13 +54,12 @@ header {
     border-radius: 5px 5px 5px 5px;
     z-index: 1;
 
-    @media screen and (min-width: $desktop) {
-      width: 31.25rem;
+    &:focus {
+      outline: none;
     }
 
-    &:focus {
-      border: none;
-      outline: none;
+    @media screen and (min-width: $desktop) {
+      width: 31.25rem;
     }
   }
 }
