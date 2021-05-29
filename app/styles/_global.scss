@@ -55,7 +55,7 @@ select {
 .delete-btn {
   color: $pink;
   &:hover {
-    transition: ease-in-out;
+    transition: 200ms ease-in-out;
     color: $lightBlue;
     cursor: pointer;
   }
@@ -63,4 +63,5 @@ select {
 
 .checked-btn {
   color: $lightBlue;
+  transition: 300ms ease-in-out;
 }

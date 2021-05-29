@@ -61,14 +61,16 @@ select {
 
 .check-btn:hover,
 .delete-btn:hover {
-  -webkit-transition: ease-in-out;
-  transition: ease-in-out;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
   color: #9bb7b8;
   cursor: pointer;
 }
 
 .checked-btn {
   color: #9bb7b8;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
 }
 
 header {
